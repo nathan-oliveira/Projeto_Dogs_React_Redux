@@ -1,0 +1,10 @@
+https://dogsapi.origamid.dev/json/
+
+Usuário padrão
+username: dog
+password: dog
+
+
+======
+0828-foto-pagina
+00:20
