@@ -9,6 +9,7 @@ import { PHOTO_POST } from '../../../api'
 import Input from '../../forms/input/Input'
 import Button from '../../forms/button/Button'
 import Error from '../../helper/Error'
+import Head from '../../helper/Head'
 
 const UserPhotoPost = () => {
   const name = useForm();
@@ -46,6 +47,7 @@ const UserPhotoPost = () => {
 
   return (
     <section className={`${styles.photoPost} animeLeft`}>
+      <Head title="Poste sua foto" />
       <form onSubmit={handleSubmit}>
         <Input label="Nome" type="text" name="nome" {...name} />
         <Input label="Peso" type="number" name="peso" {...peso} />
