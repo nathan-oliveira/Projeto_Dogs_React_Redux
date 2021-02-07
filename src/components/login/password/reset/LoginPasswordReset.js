@@ -8,7 +8,7 @@ import { PASSWORD_RESET } from '../../../../api'
 import Input from '../../../forms/input/Input'
 import Button from '../../../forms/button/Button'
 import Error from '../../../helper/Error'
-import Head from '../../helper/Head'
+import Head from '../../../helper/Head'
 
 const LoginPasswordReset = () => {
   const [login, setLogin] = React.useState('');

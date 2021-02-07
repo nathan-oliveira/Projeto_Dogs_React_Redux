@@ -6,7 +6,7 @@ import Input from '../../../forms/input/Input'
 import Button from '../../../forms/button/Button'
 import { PASSWORD_LOST } from '../../../../api'
 import Error from '../../../helper/Error'
-import Head from '../../helper/Head'
+import Head from '../../../helper/Head'
 
 const LoginPasswordLost = () => {
   const login = userForm();

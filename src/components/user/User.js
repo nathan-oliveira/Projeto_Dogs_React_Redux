@@ -1,16 +1,16 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { UserContext } from '../../UserContext'
 
-import Feed from '../Feed/Feed'
+import Feed from '../feed/Feed'
 import UserHeader from './header/UserHeader'
 import UserPhotoPost from './photo/UserPhotoPost'
 import UserStats from './stats/UserStats'
 import NotFound from '../error/NotFound'
 import Head from '../helper/Head'
+import { useSelector } from 'react-redux'
 
 const User = () => {
-  const { data } = React.useContext(UserContext)
+  const { data } = useSelector(state => state.user)
 
   return (
     <section className="container">

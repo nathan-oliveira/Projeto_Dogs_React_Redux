@@ -1,18 +1,18 @@
 import React from 'react'
 import styles from './PhotoComments.module.css'
-import { UserContext } from '../../../UserContext'
 
 import PhotoCommentsForm from './form/PhotoCommentsForm'
+import { useSelector } from 'react-redux'
 
 const PhotoComments = (props) => {
   const [comments, setComments] = React.useState(() => props.comments)
   const commentsSection = React.useRef(null);
-  const { login } = React.useContext(UserContext);
+  const { data } = useSelector(state => state.user)
 
   React.useEffect(() => {
     commentsSection.current.scrollTop = commentsSection.current.scrollHeight;
   }, [comments])
-  //single
+
   return (
     <>
       <ul ref={commentsSection} className={`${styles.comments} ${props.single ? styles.single : ''}`}>
@@ -22,7 +22,7 @@ const PhotoComments = (props) => {
         </li>)}
       </ul>
 
-      {login && (
+      {data && (
         <PhotoCommentsForm
           single={props.single}
           id={props.id}
